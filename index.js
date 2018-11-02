@@ -75,7 +75,7 @@ class pubgClient {
     return await this.http.get(`shards/${region}/players/${playerId}/seasons/lifetime`).then(({data}) => data.data)
   }
 
-  async getPlayerMatchSeasons(playerId, seasonId){
+  async getPlayerMatchSeason(playerId, seasonId){
     return await this.http.get(`shards/steam/players/${playerId}/seasons/${seasonId}`).then(({data}) => data.data)
   }
 
