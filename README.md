@@ -9,18 +9,16 @@ https://documentation.playbattlegrounds.com/en/making-requests.html#regions
   const pubg = new pubgClient('apiKey')
   
   /* return all promise */
+    
+  pubg.getStatus()
   
   pubg.getPlayers(region, playerNames)
   
   pubg.getPlayer(region, playerName)
   
-  pubg.getPlayerId(region, playerName)
-  
   pubg.getMatch(region, matchId)
   
-  pubg.getPlayerMatches(region, playerName)
-  
-  pubg.getPlayerMatchStats(match, playerId)
+  pubg.getPlayerMatchStats(included, playerId)
   
   pubg.getPlayerMatchesStats(player)
   
@@ -35,8 +33,6 @@ https://documentation.playbattlegrounds.com/en/making-requests.html#regions
   pubg.getTelemetryUrl(region, matchId)
   
   pubg.getTelemetry(telemetryUrl)
-  
-  pubg.getStatus()
 ```
 
 
