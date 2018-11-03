@@ -1,4 +1,4 @@
-# pubgClient
+# pubg-api-client
 Promise based pubg api client
 
 ## Regions
