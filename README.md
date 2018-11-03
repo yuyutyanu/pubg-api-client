@@ -10,29 +10,29 @@ https://documentation.playbattlegrounds.com/en/making-requests.html#regions
   
   /* return all promise */
     
-   getStatus () 
+   const serverStatus = await getStatus() 
    
-   getPlayer (region, playerName)
+   const player = await getPlayer(region, playerName)
   
-   getPlayers (region, playerNames)
+   const players = await getPlayers(region, playerNames)
       
-   getMatch (region, matchId) 
+   const match = await getMatch(region, matchId) 
   
-   getPlayerMatchStats (included, playerId) 
+   const matchStats = await getPlayerMatchStats(included, playerId) 
   
-   getPlayerMatchesStats (region, player) 
+   const matchesStats = await getPlayerMatchesStats(region, player) 
   
-   getSeasons () 
+   const seasons = await getSeasons() 
   
-   getCurrentSeason ()
+   const currentSeason = await getCurrentSeason()
    
-   getLifeTime (region, playerId) 
+   const lifeTime = await getLifeTime(region, playerId) 
   
-   getPlayerMatchSeason (playerId, seasonId)
+   const seasonStats = await getPlayerMatchSeason(playerId, seasonId)
   
-   getTelemetryUrl (match) 
+   const telemetryUrl = await getTelemetryUrl(match) 
   
-   getTelemetry (telemetryUrl) 
+   const telemetry = await getTelemetry(telemetryUrl) 
 ```
 
 
