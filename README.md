@@ -8,8 +8,8 @@ https://documentation.playbattlegrounds.com/en/making-requests.html#regions
 
 ```
 npm install --save pubg-api-client
-
 ```
+
 ## Usage
 ```javascript
   const pubgApiClient = require('pubg-api-client')
