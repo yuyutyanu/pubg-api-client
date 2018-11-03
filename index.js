@@ -49,11 +49,10 @@ class pubgClient {
 
   async getPlayerMatchesStats (region, player) {
     const matches = player.relationships.matches.data
-    const results = matches.map(async (match) => {
-      return await this.getMatch(region, match.id).then(async match => {
-        const stats = await this.getPlayerMatchStats(match.included, player.id)
-        return {attributes: match.data.attributes, stats}
-      })
+    const results = matches.map(async (m) => {
+      const match = await this.getMatch(region, m.id)
+      const stats = await this.getPlayerMatchStats(match.included, player.id)
+      return {attributes: match.data.attributes, stats}
     })
     return await Promise.all(results)
   }
