@@ -10,32 +10,48 @@ https://documentation.playbattlegrounds.com/en/making-requests.html#regions
   
   /* return all promise */
     
-  pubg.getStatus()
+   getStatus () 
+   
+   getPlayer (region, playerName)
   
-  pubg.getPlayers(region, playerNames)
+   getPlayers (region, playerNames)
+      
+   getMatch (region, matchId) 
   
-  pubg.getPlayer(region, playerName)
+   getPlayerMatchStats (included, playerId) 
   
-  pubg.getMatch(region, matchId)
+   getPlayerMatchesStats (region, player) 
   
-  pubg.getPlayerMatchStats(included, playerId)
+   getSeasons () 
   
-  pubg.getPlayerMatchesStats(player)
+   getCurrentSeason ()
+   
+   getLifeTime (region, playerId) 
   
-  pubg.getSeasons()
+   getPlayerMatchSeason (playerId, seasonId)
   
-  pubg.getCurrentSeason()
+   getTelemetryUrl (match) 
   
-  pubg.getLifeTime(region, playerId)
-  
-  pubg.getPlayerMatchSeason(playerId, seasonId)
-  
-  pubg.getTelemetryUrl(region, matchId)
-  
-  pubg.getTelemetry(telemetryUrl)
+   getTelemetry (telemetryUrl) 
 ```
 
 
 ## test
+ 
+### setup 
 
-coming soon..
+From line 4 to line 6 in test.js 
+
+```javascript
+
+const pubg = new pubgClient('your apiKey')
+const region = 'your region'
+const playerNames = 'name, name, name...'
+
+```
+### run
+
+```
+npm test
+
+```

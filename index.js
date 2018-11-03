@@ -74,8 +74,7 @@ class pubgClient {
     return await this.http.get(`shards/steam/players/${playerId}/seasons/${seasonId}`).then(({data}) => data.data)
   }
 
-  async getTelemetryUrl (region, matchId) {
-    const match = await this.getMatch(region, matchId)
+  async getTelemetryUrl (match) {
     const assetId = match.data.relationships.assets.data[0].id
     const asset = match.included.find(obj => {
       return obj.id === assetId
@@ -84,7 +83,7 @@ class pubgClient {
   }
 
   async getTelemetry (telemetryUrl) {
-    return await axios.get(telemetryUrl)
+    return await axios.get(telemetryUrl).then(({data})=> data)
   }
 
 }
