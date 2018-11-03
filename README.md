@@ -4,52 +4,39 @@ Promise based pubg api client
 ## Regions
 https://documentation.playbattlegrounds.com/en/making-requests.html#regions
 
+## install
+
+```
+npm install --save pubg-api-client
+
+```
 ## Usage
 ```javascript
-  const pubg = new pubgClient('apiKey')
+  const pubgApiClient = require('pubg-api-client')
+  
+  const pubg = new pubgApiClient('your apiKey')
     
-  const serverStatus = await getStatus() 
+  const serverStatus = await pubg.getStatus() 
    
-  const player = await getPlayer(region, playerName)
+  const player = await pubg.getPlayer(region, playerName)
   
-  const players = await getPlayers(region, playerNames)
+  const players = await pubg.getPlayers(region, playerNames)
       
-  const match = await getMatch(region, matchId) 
+  const match = await pubg.getMatch(region, matchId) 
   
-  const matchStats = await getPlayerMatchStats(included, playerId) 
+  const matchStats = await pubg.getPlayerMatchStats(included, playerId) 
   
-  const matchesStats = await getPlayerMatchesStats(region, player) 
+  const matchesStats = await pubg.getPlayerMatchesStats(region, player) 
   
-  const seasons = await getSeasons() 
+  const seasons = await pubg.getSeasons() 
   
-  const currentSeason = await getCurrentSeason()
+  const currentSeason = await pubg.getCurrentSeason()
    
-  const lifeTime = await getLifeTime(region, playerId) 
+  const lifeTime = await pubg.getLifeTime(region, playerId) 
   
-  const seasonStats = await getPlayerMatchSeason(playerId, seasonId)
+  const seasonStats = await pubg.getPlayerMatchSeason(playerId, seasonId)
   
-  const telemetryUrl = await getTelemetryUrl(match) 
+  const telemetryUrl = await pubg.getTelemetryUrl(match) 
   
-  const telemetry = await getTelemetry(telemetryUrl) 
-```
-
-
-## test
- 
-### setup 
-
-From line 4 to line 6 in test.js 
-
-```javascript
-
-const pubg = new pubgClient('your apiKey')
-const region = 'your region'
-const playerNames = 'name, name, name...'
-
-```
-### run
-
-```
-npm test
-
+  const telemetry = await pubg.getTelemetry(telemetryUrl) 
 ```
