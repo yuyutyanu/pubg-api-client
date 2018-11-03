@@ -1,6 +1,6 @@
 {
-  "name": "pubgclient",
-  "version": "1.0.0",
+  "name": "pubg-api-client",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
